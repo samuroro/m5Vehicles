@@ -2,10 +2,13 @@ package vehicles;
 
 public class Vehicle {
 
-		private int cilindrada;
-		private int portes;
-		private int velocitat_actual;
-		public static final int VELOCITAT_MAXIMA = 120;		
+	private int cilindrada;
+	private int portes;
+	private int velocitat_actual;
+	private int marxa_actual = 0;
+	public static final int VELOCITAT_MAXIMA = 120;
+	public static final int MARXES = 5;
+	
 		
 		public Vehicle(int cilindrada, int portes, int velocitat_actual) {
 			super();
@@ -31,6 +34,18 @@ public class Vehicle {
 			}		
 			else {
 				velocitat =  0;
+			}
+		}
+		
+		public void pujarMarxa (int marxa) {	
+			if (marxa < MARXES && marxa > 0) {
+				marxa += 1; 
+			}
+		}
+		
+		public void baixarMarxa (int marxa) {	
+			if (marxa < MARXES && marxa > 0) {
+				marxa -= 1; 
 			}
 		}
 
