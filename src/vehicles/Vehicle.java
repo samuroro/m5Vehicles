@@ -11,7 +11,7 @@ public class Vehicle {
 			super();
 			this.cilindrada = cilindrada;
 			this.portes = portes;
-			this.velocitat_actual = velocitat_actual;
+			this.velocitat_actual = 0;
 		}
 		
 		public void accelerar(int velocitat) {				
