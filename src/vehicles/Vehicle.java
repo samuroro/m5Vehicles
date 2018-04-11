@@ -14,7 +14,24 @@ public class Vehicle {
 			this.velocitat_actual = velocitat_actual;
 		}
 		
-		public void accelerar(int velocitat) {				
+		public void accelerar(int velocitat) {	
+			
+			if (velocitat < this.VELOCITAT_MAXIMA) {
 				velocitat += 10;
+			}		
+			else {
+				velocitat =  this.VELOCITAT_MAXIMA;
+			}
 		}
+		
+		public void desaccelerar(int velocitat) {	
+			
+			if (velocitat > 0) {
+				velocitat -= 10;
+			}		
+			else {
+				velocitat =  0;
+			}
+		}
+
 }
